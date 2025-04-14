@@ -80,20 +80,52 @@
 		1861A5462DA8F8CD002A7F4B /* SmartDocumentViewer */ = {
 			isa = PBXGroup;
 			children = (
-				1861A57E2DACF7F6002A7F4B /* GoogleService-Info.plist */,
-				1861A5472DA8F8CD002A7F4B /* AppDelegate.swift */,
-				1861A54B2DA8F8CD002A7F4B /* ViewController.swift */,
-				1861A54D2DA8F8CD002A7F4B /* Main.storyboard */,
-				1861A5532DA8F8CE002A7F4B /* Assets.xcassets */,
-				1861A5552DA8F8CE002A7F4B /* LaunchScreen.storyboard */,
-				1861A5582DA8F8CE002A7F4B /* Info.plist */,
-				1861A5502DA8F8CD002A7F4B /* SmartDocumentViewer.xcdatamodeld */,
-				1861A5782DA961F7002A7F4B /* Extensions.swift */,
-				1861A57A2DACEF7B002A7F4B /* HomePageViewController.swift */,
-				1861A57C2DACF26D002A7F4B /* Constant.swift */,
-				1861A5802DACFA4B002A7F4B /* FileViewerController.swift */,
+				1861A5852DAD272E002A7F4B /* HomePage */,
+				1861A5842DAD2712002A7F4B /* SignIn */,
+				1861A5832DAD26E6002A7F4B /* Utilities */,
+				1861A5822DAD26AB002A7F4B /* Main */,
 			);
 			path = SmartDocumentViewer;
+			sourceTree = "<group>";
+		};
+		1861A5822DAD26AB002A7F4B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1861A5532DA8F8CE002A7F4B /* Assets.xcassets */,
+				1861A5582DA8F8CE002A7F4B /* Info.plist */,
+				1861A5502DA8F8CD002A7F4B /* SmartDocumentViewer.xcdatamodeld */,
+				1861A57E2DACF7F6002A7F4B /* GoogleService-Info.plist */,
+				1861A5472DA8F8CD002A7F4B /* AppDelegate.swift */,
+				1861A5552DA8F8CE002A7F4B /* LaunchScreen.storyboard */,
+				1861A54D2DA8F8CD002A7F4B /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1861A5832DAD26E6002A7F4B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1861A5782DA961F7002A7F4B /* Extensions.swift */,
+				1861A57C2DACF26D002A7F4B /* Constant.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1861A5842DAD2712002A7F4B /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				1861A54B2DA8F8CD002A7F4B /* ViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		1861A5852DAD272E002A7F4B /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				1861A5802DACFA4B002A7F4B /* FileViewerController.swift */,
+				1861A57A2DACEF7B002A7F4B /* HomePageViewController.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
