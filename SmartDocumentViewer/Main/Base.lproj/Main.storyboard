@@ -113,42 +113,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV8-ic-D0K">
-                                <rect key="frame" x="175.66666666666666" y="450" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd2-AI-cK4">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd2-AI-cK4">
                                 <rect key="frame" x="159" y="491" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="signOutAction:" destination="xFW-ww-Lmf" eventType="touchUpInside" id="R2j-9h-gkx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-e4-fNZ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-e4-fNZ">
                                 <rect key="frame" x="148.66666666666666" y="385" width="96" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Open File"/>
                                 <connections>
                                     <action selector="openPDFFile:" destination="xFW-ww-Lmf" eventType="touchUpInside" id="HcJ-9E-ICu"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYv-o2-nXj">
+                                <rect key="frame" x="12" y="123" width="369" height="54"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ver-tG-Z0x">
+                                        <rect key="frame" x="10" y="5" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ver-tG-Z0x" secondAttribute="height" id="x7W-LC-oV3"/>
+                                            <constraint firstAttribute="height" constant="44" id="xYi-aE-lNg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV8-ic-D0K">
+                                        <rect key="frame" x="70" y="16.666666666666657" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ver-tG-Z0x" firstAttribute="leading" secondItem="NYv-o2-nXj" secondAttribute="leading" constant="10" id="BpQ-qk-pLD"/>
+                                    <constraint firstItem="PV8-ic-D0K" firstAttribute="centerY" secondItem="Ver-tG-Z0x" secondAttribute="centerY" id="LoP-JJ-eZf"/>
+                                    <constraint firstAttribute="height" constant="54" id="MbK-DL-fRg"/>
+                                    <constraint firstItem="Ver-tG-Z0x" firstAttribute="centerY" secondItem="NYv-o2-nXj" secondAttribute="centerY" id="lNq-dc-T4i"/>
+                                    <constraint firstItem="PV8-ic-D0K" firstAttribute="leading" secondItem="Ver-tG-Z0x" secondAttribute="trailing" constant="16" id="vA2-4b-JWc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rdh-bP-SWP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Sd2-AI-cK4" firstAttribute="top" secondItem="PV8-ic-D0K" secondAttribute="bottom" constant="20" id="Hc3-C5-ZIN"/>
-                            <constraint firstItem="jfE-e4-fNZ" firstAttribute="centerX" secondItem="PV8-ic-D0K" secondAttribute="centerX" id="Yaz-YJ-rsZ"/>
-                            <constraint firstItem="Sd2-AI-cK4" firstAttribute="centerX" secondItem="PV8-ic-D0K" secondAttribute="centerX" id="dk4-Nl-DLU"/>
-                            <constraint firstItem="PV8-ic-D0K" firstAttribute="centerX" secondItem="Rdh-bP-SWP" secondAttribute="centerX" id="lwu-uw-dbQ"/>
-                            <constraint firstItem="PV8-ic-D0K" firstAttribute="top" secondItem="jfE-e4-fNZ" secondAttribute="bottom" constant="30" id="sF9-e6-k4B"/>
-                            <constraint firstItem="PV8-ic-D0K" firstAttribute="centerY" secondItem="Rdh-bP-SWP" secondAttribute="centerY" id="xWF-4h-eEJ"/>
+                            <constraint firstItem="Rdh-bP-SWP" firstAttribute="trailing" secondItem="NYv-o2-nXj" secondAttribute="trailing" constant="12" id="9k0-yg-b0o"/>
+                            <constraint firstItem="NYv-o2-nXj" firstAttribute="leading" secondItem="Rdh-bP-SWP" secondAttribute="leading" constant="12" id="M1g-r8-NUu"/>
+                            <constraint firstItem="NYv-o2-nXj" firstAttribute="top" secondItem="fZb-CV-Yhw" secondAttribute="topMargin" constant="20" id="cup-d1-6Us"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r8n-3I-StA"/>
                     <connections>
+                        <outlet property="profileImg" destination="Ver-tG-Z0x" id="XtO-8O-cuz"/>
                         <outlet property="signOutBtn" destination="Sd2-AI-cK4" id="ZjI-sY-jrH"/>
                         <outlet property="welcomeLbl" destination="PV8-ic-D0K" id="gLw-Oy-3dX"/>
                     </connections>

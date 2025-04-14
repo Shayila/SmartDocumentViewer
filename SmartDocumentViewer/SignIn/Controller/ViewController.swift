@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var welcomeLbl: UILabel!
     
     
+    var viewModal : SignInViewModal {
+        let modal = SignInViewModal()
+        return modal
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +44,14 @@ class ViewController: UIViewController {
     func userProfileAfterSuccess(user : GIDGoogleUser){
         
             print("\(user.profile?.name ?? "")")
-
+//_imageURL    NSURL?    "https://lh3.googleusercontent.com/a/ACg8ocIxta-WeJNj4DWIZOhi1tSTguZ8DeaQ_58UQcvmd-opO-OkfxyDTg=s96-c"    0x0000600002919880
             self.welcomeLbl.isHidden = false
             self.welcomeLbl.text = "Welcome '\(user.profile?.name ?? "")' "
             self.googleBtn.isHidden = true
             
-            Constant.profile = user
+            viewModal.saveUserDetail(name: user.profile?.name ?? "", email: user.profile?.email ?? "", imgUrl: user.profile?.imageURL(withDimension: 200)?.path ?? "")
+            
+            UserDefaults.standard.set(user.profile?.email ?? "", forKey: "email")
             Constant.callHomePageVC()
         
     }

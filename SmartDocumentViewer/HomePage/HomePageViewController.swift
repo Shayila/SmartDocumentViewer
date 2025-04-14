@@ -13,12 +13,23 @@ class HomePageViewController: UIViewController {
 
     @IBOutlet weak var signOutBtn: UIButton!
     @IBOutlet weak var welcomeLbl: UILabel!
+            
+    @IBOutlet weak var profileImg: UIImageView!
+    
+    var signInviewModal : SignInViewModal {
+        let modal = SignInViewModal()
+        modal.fetchUserDetails()
+        return modal
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Home Page"
         // Do any additional setup after loading the view.
         signOutBtn.setTitle("Sign Out", for: .normal)
-        welcomeLbl.text = Constant.profile?.profile?.name ?? ""
+        profileImg.setImage( "https://lh3.googleusercontent.com\(signInviewModal.signInDetail.imageURL)", "BGImage")
+        welcomeLbl.text = "Welcome \(signInviewModal.signInDetail.name)"
     }
     
 
@@ -29,7 +40,7 @@ class HomePageViewController: UIViewController {
     }
     @IBAction func signOutAction(_ sender: Any) {
         GIDSignIn.sharedInstance.signOut()
-        
+        signInviewModal.deleteUserDetail()
         Constant.callLoginPageVC()
     }
     /*

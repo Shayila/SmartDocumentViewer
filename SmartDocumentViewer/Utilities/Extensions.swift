@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AlamofireImage
 
 
 
@@ -88,5 +89,25 @@ extension UIApplication {
             return topViewController(controller: presented)
         }
         return controller
+    }
+}
+
+
+// MARK: - UIImageview
+extension UIImageView {
+    
+    func setImage (_ urlString : String, _ placeHolder : String){
+        let urlStrin = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? urlString
+        if let url = URL (string: urlStrin){
+            //Placeholder Image which was in your Local(Assets)
+            let image = UIImage (named: placeHolder)
+            self.image = image
+            ImageResponseSerializer.addAcceptableImageContentTypes(["image/jpg","image/png","binary/octet-stream"])
+            self.af.setImage(withURL: url)
+        }
+        else
+        {
+            self.image = UIImage(named: placeHolder)
+        }
     }
 }

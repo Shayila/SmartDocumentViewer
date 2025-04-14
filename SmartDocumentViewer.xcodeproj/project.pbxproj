@@ -25,6 +25,11 @@
 		1861A57D2DACF26D002A7F4B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861A57C2DACF26D002A7F4B /* Constant.swift */; };
 		1861A57F2DACF7F6002A7F4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1861A57E2DACF7F6002A7F4B /* GoogleService-Info.plist */; };
 		1861A5812DACFA4B002A7F4B /* FileViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861A5802DACFA4B002A7F4B /* FileViewerController.swift */; };
+		1861A5882DAD2828002A7F4B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861A5872DAD2828002A7F4B /* CoreDataManager.swift */; };
+		1861A58A2DAD286B002A7F4B /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861A5892DAD286B002A7F4B /* PersistenceController.swift */; };
+		1861A58D2DAD3460002A7F4B /* UserDetailModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861A58C2DAD3460002A7F4B /* UserDetailModal.swift */; };
+		1861A5902DAD3540002A7F4B /* SignInViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861A58F2DAD3540002A7F4B /* SignInViewModal.swift */; };
+		1861A5952DAD3FA4002A7F4B /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1861A5942DAD3FA4002A7F4B /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,10 @@
 		1861A57C2DACF26D002A7F4B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1861A57E2DACF7F6002A7F4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1861A5802DACFA4B002A7F4B /* FileViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewerController.swift; sourceTree = "<group>"; };
+		1861A5872DAD2828002A7F4B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1861A5892DAD286B002A7F4B /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		1861A58C2DAD3460002A7F4B /* UserDetailModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailModal.swift; sourceTree = "<group>"; };
+		1861A58F2DAD3540002A7F4B /* SignInViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1861A56E2DA920D6002A7F4B /* FirebaseAppCheck in Frameworks */,
+				1861A5952DAD3FA4002A7F4B /* AlamofireImage in Frameworks */,
 				1861A5682DA920D6002A7F4B /* FirebaseAnalytics in Frameworks */,
 				1861A5752DA92529002A7F4B /* GoogleSignInSwift in Frameworks */,
 				1861A5702DA920D6002A7F4B /* FirebaseAppDistribution-Beta in Frameworks */,
@@ -80,6 +90,7 @@
 		1861A5462DA8F8CD002A7F4B /* SmartDocumentViewer */ = {
 			isa = PBXGroup;
 			children = (
+				1861A5862DAD2797002A7F4B /* Manager */,
 				1861A5852DAD272E002A7F4B /* HomePage */,
 				1861A5842DAD2712002A7F4B /* SignIn */,
 				1861A5832DAD26E6002A7F4B /* Utilities */,
@@ -91,9 +102,9 @@
 		1861A5822DAD26AB002A7F4B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1861A5532DA8F8CE002A7F4B /* Assets.xcassets */,
 				1861A5582DA8F8CE002A7F4B /* Info.plist */,
 				1861A5502DA8F8CD002A7F4B /* SmartDocumentViewer.xcdatamodeld */,
+				1861A5532DA8F8CE002A7F4B /* Assets.xcassets */,
 				1861A57E2DACF7F6002A7F4B /* GoogleService-Info.plist */,
 				1861A5472DA8F8CD002A7F4B /* AppDelegate.swift */,
 				1861A5552DA8F8CE002A7F4B /* LaunchScreen.storyboard */,
@@ -114,7 +125,9 @@
 		1861A5842DAD2712002A7F4B /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				1861A54B2DA8F8CD002A7F4B /* ViewController.swift */,
+				1861A5922DAD3730002A7F4B /* Controller */,
+				1861A5912DAD3545002A7F4B /* ViewModal */,
+				1861A58B2DAD2BBC002A7F4B /* Modal */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -126,6 +139,39 @@
 				1861A57A2DACEF7B002A7F4B /* HomePageViewController.swift */,
 			);
 			path = HomePage;
+			sourceTree = "<group>";
+		};
+		1861A5862DAD2797002A7F4B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1861A5872DAD2828002A7F4B /* CoreDataManager.swift */,
+				1861A5892DAD286B002A7F4B /* PersistenceController.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1861A58B2DAD2BBC002A7F4B /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				1861A58C2DAD3460002A7F4B /* UserDetailModal.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		1861A5912DAD3545002A7F4B /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				1861A58F2DAD3540002A7F4B /* SignInViewModal.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		1861A5922DAD3730002A7F4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1861A54B2DA8F8CD002A7F4B /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +198,7 @@
 				1861A56F2DA920D6002A7F4B /* FirebaseAppDistribution-Beta */,
 				1861A5722DA92529002A7F4B /* GoogleSignIn */,
 				1861A5742DA92529002A7F4B /* GoogleSignInSwift */,
+				1861A5942DAD3FA4002A7F4B /* AlamofireImage */,
 			);
 			productName = SmartDocumentViewer;
 			productReference = 1861A5442DA8F8CD002A7F4B /* SmartDocumentViewer.app */;
@@ -184,6 +231,7 @@
 			packageReferences = (
 				1861A5662DA920D6002A7F4B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				1861A5712DA92529002A7F4B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				1861A5932DAD3FA4002A7F4B /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 1861A5452DA8F8CD002A7F4B /* Products */;
 			projectDirPath = "";
@@ -213,12 +261,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1861A58A2DAD286B002A7F4B /* PersistenceController.swift in Sources */,
 				1861A5792DA961F7002A7F4B /* Extensions.swift in Sources */,
 				1861A5522DA8F8CD002A7F4B /* SmartDocumentViewer.xcdatamodeld in Sources */,
+				1861A58D2DAD3460002A7F4B /* UserDetailModal.swift in Sources */,
+				1861A5902DAD3540002A7F4B /* SignInViewModal.swift in Sources */,
 				1861A57B2DACEF7B002A7F4B /* HomePageViewController.swift in Sources */,
 				1861A54C2DA8F8CD002A7F4B /* ViewController.swift in Sources */,
 				1861A5482DA8F8CD002A7F4B /* AppDelegate.swift in Sources */,
 				1861A5812DACFA4B002A7F4B /* FileViewerController.swift in Sources */,
+				1861A5882DAD2828002A7F4B /* CoreDataManager.swift in Sources */,
 				1861A57D2DACF26D002A7F4B /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +427,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8R9V6Y3UV8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmartDocumentViewer/Info.plist;
+				INFOPLIST_FILE = SmartDocumentViewer/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -407,7 +459,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8R9V6Y3UV8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmartDocumentViewer/Info.plist;
+				INFOPLIST_FILE = SmartDocumentViewer/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -468,6 +520,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		1861A5932DAD3FA4002A7F4B /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -505,6 +565,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1861A5712DA92529002A7F4B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		1861A5942DAD3FA4002A7F4B /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1861A5932DAD3FA4002A7F4B /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 

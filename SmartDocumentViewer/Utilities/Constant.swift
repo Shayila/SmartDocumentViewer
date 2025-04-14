@@ -12,7 +12,7 @@ import GoogleSignIn
 
 class Constant {
     
-    static var profile : GIDGoogleUser? = nil
+   // static var profile : GIDGoogleUser? = nil
     
     
    static func callHomePageVC(){
