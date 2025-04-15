@@ -189,7 +189,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApG-uB-lyK">
-                                <rect key="frame" x="12" y="283" width="117" height="100"/>
+                                <rect key="frame" x="62" y="283" width="117" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vph-9R-xU0">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="100"/>
@@ -226,7 +226,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PX8-k7-k5u">
-                                <rect key="frame" x="149" y="283" width="108" height="100"/>
+                                <rect key="frame" x="199" y="283" width="108" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttb-Wq-orF">
                                         <rect key="frame" x="0.0" y="0.0" width="108" height="100"/>
@@ -262,6 +262,43 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXn-0e-tml">
+                                <rect key="frame" x="55.333333333333329" y="399" width="251.66666666666669" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba0-6f-smI">
+                                        <rect key="frame" x="0.0" y="0.0" width="251.66666666666666" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Enable/Disable Notification">
+                                            <imageReference key="image" image="list.bullet.clipboard.fill" catalog="system" symbolScale="large"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="alertNotificationAction:" destination="xFW-ww-Lmf" eventType="touchUpInside" id="InD-aU-n3B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ba0-6f-smI" firstAttribute="centerY" secondItem="LXn-0e-tml" secondAttribute="centerY" id="cs4-YC-8Fb"/>
+                                    <constraint firstAttribute="height" constant="100" id="cuO-j0-Lqb"/>
+                                    <constraint firstAttribute="trailing" secondItem="ba0-6f-smI" secondAttribute="trailing" id="hf2-Od-yQk"/>
+                                    <constraint firstItem="ba0-6f-smI" firstAttribute="leading" secondItem="LXn-0e-tml" secondAttribute="leading" id="j5h-PR-Rup"/>
+                                    <constraint firstItem="ba0-6f-smI" firstAttribute="height" secondItem="LXn-0e-tml" secondAttribute="height" id="m5w-eQ-qOh"/>
+                                    <constraint firstItem="ba0-6f-smI" firstAttribute="centerX" secondItem="LXn-0e-tml" secondAttribute="centerX" id="uc1-Yc-IXT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rdh-bP-SWP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -269,14 +306,16 @@
                             <constraint firstItem="PXk-iA-eFI" firstAttribute="top" secondItem="NYv-o2-nXj" secondAttribute="bottom" constant="12" id="52M-C3-GxH"/>
                             <constraint firstItem="Rdh-bP-SWP" firstAttribute="trailing" secondItem="NYv-o2-nXj" secondAttribute="trailing" constant="12" id="9k0-yg-b0o"/>
                             <constraint firstItem="PX8-k7-k5u" firstAttribute="centerY" secondItem="ApG-uB-lyK" secondAttribute="centerY" id="I3B-fI-gLs"/>
-                            <constraint firstItem="ApG-uB-lyK" firstAttribute="leading" secondItem="NYv-o2-nXj" secondAttribute="leading" id="J2z-JO-6aR"/>
+                            <constraint firstItem="ApG-uB-lyK" firstAttribute="leading" secondItem="NYv-o2-nXj" secondAttribute="leading" constant="50" id="J2z-JO-6aR"/>
                             <constraint firstItem="PXk-iA-eFI" firstAttribute="leading" secondItem="NYv-o2-nXj" secondAttribute="leading" id="L0R-6S-X5N"/>
                             <constraint firstItem="PXk-iA-eFI" firstAttribute="height" secondItem="NYv-o2-nXj" secondAttribute="height" id="LNX-Cl-1R8"/>
                             <constraint firstItem="NYv-o2-nXj" firstAttribute="leading" secondItem="Rdh-bP-SWP" secondAttribute="leading" constant="12" id="M1g-r8-NUu"/>
                             <constraint firstItem="ApG-uB-lyK" firstAttribute="top" secondItem="PXk-iA-eFI" secondAttribute="bottom" constant="40" id="cTS-1O-1Ze"/>
                             <constraint firstItem="NYv-o2-nXj" firstAttribute="top" secondItem="fZb-CV-Yhw" secondAttribute="topMargin" constant="20" id="cup-d1-6Us"/>
+                            <constraint firstItem="LXn-0e-tml" firstAttribute="top" secondItem="ApG-uB-lyK" secondAttribute="bottom" constant="16" id="d0t-9J-aLy"/>
                             <constraint firstItem="PXk-iA-eFI" firstAttribute="trailing" secondItem="NYv-o2-nXj" secondAttribute="trailing" id="fxm-Rc-PrH"/>
                             <constraint firstItem="PX8-k7-k5u" firstAttribute="leading" secondItem="ApG-uB-lyK" secondAttribute="trailing" constant="20" id="pgP-AF-RVP"/>
+                            <constraint firstItem="LXn-0e-tml" firstAttribute="trailing" secondItem="PX8-k7-k5u" secondAttribute="trailing" id="wNv-sa-syu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r8n-3I-StA">

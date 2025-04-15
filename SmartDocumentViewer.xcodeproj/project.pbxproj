@@ -39,6 +39,9 @@
 		18F535042DAEA31C0086E26F /* GalleryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F535002DAEA31C0086E26F /* GalleryViewCell.xib */; };
 		18F535082DAEA5500086E26F /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F535072DAEA5500086E26F /* ImagePickerManager.swift */; };
 		18F5350B2DAEA7760086E26F /* ImagesViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5350A2DAEA7760086E26F /* ImagesViewModal.swift */; };
+		18F5350E2DAEDEB70086E26F /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 18F5350D2DAEDEB70086E26F /* FirebaseCore */; };
+		18F535102DAEDEB70086E26F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 18F5350F2DAEDEB70086E26F /* FirebaseMessaging */; };
+		18F535122DAEDEB70086E26F /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 18F535112DAEDEB70086E26F /* FirebaseRemoteConfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,7 @@
 		18F535002DAEA31C0086E26F /* GalleryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewCell.xib; sourceTree = "<group>"; };
 		18F535072DAEA5500086E26F /* ImagePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		18F5350A2DAEA7760086E26F /* ImagesViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModal.swift; sourceTree = "<group>"; };
+		18F5350C2DAED8430086E26F /* SmartDocumentViewerDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartDocumentViewerDebug.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +79,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F535122DAEDEB70086E26F /* FirebaseRemoteConfig in Frameworks */,
 				1861A56E2DA920D6002A7F4B /* FirebaseAppCheck in Frameworks */,
 				1861A5952DAD3FA4002A7F4B /* AlamofireImage in Frameworks */,
+				18F535102DAEDEB70086E26F /* FirebaseMessaging in Frameworks */,
 				1861A5682DA920D6002A7F4B /* FirebaseAnalytics in Frameworks */,
 				1861A5752DA92529002A7F4B /* GoogleSignInSwift in Frameworks */,
 				1861A5702DA920D6002A7F4B /* FirebaseAppDistribution-Beta in Frameworks */,
 				1861A56C2DA920D6002A7F4B /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1861A56A2DA920D6002A7F4B /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				18F5350E2DAEDEB70086E26F /* FirebaseCore in Frameworks */,
 				1861A5732DA92529002A7F4B /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +149,7 @@
 		1861A5462DA8F8CD002A7F4B /* SmartDocumentViewer */ = {
 			isa = PBXGroup;
 			children = (
+				18F5350C2DAED8430086E26F /* SmartDocumentViewerDebug.entitlements */,
 				18C70D142DAE9F9F009A5774 /* Photos */,
 				18453BDA2DAE47C800A4D49F /* WebServices */,
 				1861A5502DA8F8CD002A7F4B /* SmartDocumentViewer.xcdatamodeld */,
@@ -282,6 +290,9 @@
 				1861A5722DA92529002A7F4B /* GoogleSignIn */,
 				1861A5742DA92529002A7F4B /* GoogleSignInSwift */,
 				1861A5942DAD3FA4002A7F4B /* AlamofireImage */,
+				18F5350D2DAEDEB70086E26F /* FirebaseCore */,
+				18F5350F2DAEDEB70086E26F /* FirebaseMessaging */,
+				18F535112DAEDEB70086E26F /* FirebaseRemoteConfig */,
 			);
 			productName = SmartDocumentViewer;
 			productReference = 1861A5442DA8F8CD002A7F4B /* SmartDocumentViewer.app */;
@@ -513,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SmartDocumentViewer/SmartDocumentViewerDebug.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -520,6 +532,9 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8R9V6Y3UV8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartDocumentViewer/Main/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to capture photos and videos for attachments to messages and requests.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Granting access will allow you to take photos from your library and upload them as attachments to messages and requests.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Granting access will allow you to take photos from your library and upload them as attachments to messages and requests.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -552,6 +567,9 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8R9V6Y3UV8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartDocumentViewer/Main/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to capture photos and videos for attachments to messages and requests.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Granting access will allow you to take photos from your library and upload them as attachments to messages and requests.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Granting access will allow you to take photos from your library and upload them as attachments to messages and requests.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -662,6 +680,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1861A5932DAD3FA4002A7F4B /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		18F5350D2DAEDEB70086E26F /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1861A5662DA920D6002A7F4B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		18F5350F2DAEDEB70086E26F /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1861A5662DA920D6002A7F4B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		18F535112DAEDEB70086E26F /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1861A5662DA920D6002A7F4B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
 		};
 /* End XCSwiftPackageProductDependency section */
 

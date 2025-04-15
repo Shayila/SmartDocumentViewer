@@ -54,6 +54,18 @@ class HomePageViewController: UIViewController {
         signInviewModal.deleteUserDetail()
         Constant.callLoginPageVC()
     }
+    
+    
+    @IBAction func alertNotificationAction(_ sender: UIButton) {
+        if let alert = UserDefaults.standard.value(forKey: "") as? Bool {
+            var val = alert
+            UserDefaults.standard.set(val.toggle(), forKey: "Alert_Enabled")
+        }
+        else {
+            UserDefaults.standard.set(false, forKey: "Alert_Enabled")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
