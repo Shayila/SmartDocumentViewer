@@ -11,10 +11,10 @@ import PDFKit
 
 class HomePageViewController: UIViewController {
 
-    @IBOutlet weak var signOutBtn: UIButton!
     @IBOutlet weak var welcomeLbl: UILabel!
-            
     @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var pdfFile: UIButton!
+    
     
     var signInviewModal : SignInViewModal {
         let modal = SignInViewModal()
@@ -27,16 +27,27 @@ class HomePageViewController: UIViewController {
 
         self.title = "Home Page"
         // Do any additional setup after loading the view.
-        signOutBtn.setTitle("Sign Out", for: .normal)
         profileImg.setImage( "https://lh3.googleusercontent.com\(signInviewModal.signInDetail.imageURL)", "BGImage")
         welcomeLbl.text = "Welcome \(signInviewModal.signInDetail.name)"
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Constant.checkCameraAccess()
+        Constant.checkforLibraryAccess()
+    }
     
-
+    @IBAction func openPhotosVC(_ sender: UIButton) {
+        Constant.openPhotosVC()
+    }
+    
     @IBAction func openPDFFile(_ sender: Any) {
         
         Constant.openFileViewerVC()
         
+    }
+    @IBAction func ListPageAction(_ sender: UIButton) {
+        
+        Constant.openListViewVC()
     }
     @IBAction func signOutAction(_ sender: Any) {
         GIDSignIn.sharedInstance.signOut()

@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     func userProfileAfterSuccess(user : GIDGoogleUser){
         
             print("\(user.profile?.name ?? "")")
-//_imageURL    NSURL?    "https://lh3.googleusercontent.com/a/ACg8ocIxta-WeJNj4DWIZOhi1tSTguZ8DeaQ_58UQcvmd-opO-OkfxyDTg=s96-c"    0x0000600002919880
+
             self.welcomeLbl.isHidden = false
             self.welcomeLbl.text = "Welcome '\(user.profile?.name ?? "")' "
             self.googleBtn.isHidden = true
@@ -63,6 +63,9 @@ class ViewController: UIViewController {
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
               // Show the app's signed-out state.
+                DispatchQueue.main.async {
+                    self.viewModal.deleteEntireEntities()
+                }
             } else {
               // Show the app's signed-in state.
                 DispatchQueue.main.async {
@@ -81,12 +84,19 @@ class ViewController: UIViewController {
     @IBAction func googleSignInAction(_ sender: UIButton) {
         
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
-           guard error == nil else { return }
+            
+            if error != nil || signInResult == nil{
+                DispatchQueue.main.async {
+                    self.viewModal.deleteEntireEntities()
+                }
+            }
 
-            if let signinResult = signInResult {
+           else if let signinResult = signInResult {
                 // If sign in succeeded, display the app's main content View.
                 
                 DispatchQueue.main.async {
+                    let listVM = ListpageViewModal()
+                    listVM.fetchListFromAPI()
                     self.userProfileAfterSuccess(user: signinResult.user)
                 }
 

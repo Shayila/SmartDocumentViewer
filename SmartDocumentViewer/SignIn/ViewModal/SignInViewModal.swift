@@ -32,4 +32,10 @@ class SignInViewModal: NSObject {
         CoreDataManager.shared.deleteUserDetail(email: email)
     }
     
+    
+    func deleteEntireEntities(){
+        CoreDataManager.shared.deleteEntireList(entityName: "DataClassTable")
+        CoreDataManager.shared.deleteEntireList(entityName: "ListTable")
+        CoreDataManager.shared.deleteEntireList(entityName: "UserDetails")
+    }
 }

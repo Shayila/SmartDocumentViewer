@@ -2,9 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>GIDClientID</key>
-    <string>559302190791-5dbg1evmf8094hisabnpqemom9u68gtq.apps.googleusercontent.com</string>
-    
+	<key>GIDClientID</key>
+	<string>559302190791-5dbg1evmf8094hisabnpqemom9u68gtq.apps.googleusercontent.com</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Granting access will allow you to take photos from your library and upload them as attachments to messages and requests.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Granting access will allow you to take photos from your library and upload them as attachments to messages and requests.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses the camera to capture photos and videos for attachments to messages and requests.</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
